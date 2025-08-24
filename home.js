@@ -1,4 +1,6 @@
 const validPin = 1234;
+// add money features
+
 document.getElementById("add-money-btn").addEventListener("click", function(e) {
     e.preventDefault();
 
@@ -18,4 +20,30 @@ document.getElementById("add-money-btn").addEventListener("click", function(e) {
     }
     const totalNewAvailabelBalance = amount + availableBalance;
     document.getElementById("available-balance").innerText = totalNewAvailabelBalance;
+})
+
+
+// cash out features
+
+document.getElementById("withdraw-btn").addEventListener("click", function(e) {
+    e.preventDefault();
+    
+    const amount = parseInt(document.getElementById("withdraw-amount").value);
+    const availableBalance = parseInt(document.getElementById("available-balance").innerText)
+    
+    const totalNewAvailabelBalance = availableBalance - amount;
+    document.getElementById("available-balance").innerText = totalNewAvailabelBalance;
+})
+
+
+// toggling feature
+
+document.getElementById("add-button").addEventListener("click", function() {
+    document.getElementById("cash-out-parent").style.display = "none";
+    document.getElementById("add-money-parent").style.display = "block";
+})
+
+document.getElementById("cash-out-button").addEventListener("click", function() {
+    document.getElementById("add-money-parent").style.display = "none";
+    document.getElementById("cash-out-parent").style.display = "block";
 })
