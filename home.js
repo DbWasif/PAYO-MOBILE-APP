@@ -27,6 +27,27 @@ function setInnerText (value) {
     availableBalanceElement.innerText = value;
 }
 
+// function to toggle
+function handleToggle (id) {
+    const forms = document.getElementsByClassName("form")
+    for(const form of forms) {
+        form.style.display = "none";
+    }
+    document.getElementById(id).style.display = "block";
+}
+
+// function to toggle buttons
+function handleButtonToggle (id) {
+    const formBtns = document.getElementsByClassName("form-btn");
+    for(const btn of formBtns) {
+        btn.classList.remove("border-[#0874f2]", "bg-[#0874f20d]")
+        btn.classList.add("border-gray-300")
+    }
+    document.getElementById(id).classList.remove("border-gray-300");
+    document.getElementById(id).classList.add("border-[#0874f2]", "bg-[#0874f20d]");
+}
+
+
 // add money features
 document.getElementById("add-money-btn").addEventListener("click", function(e) {
     e.preventDefault();
@@ -64,11 +85,31 @@ document.getElementById("withdraw-btn").addEventListener("click", function(e) {
 
 // toggling feature
 document.getElementById("add-button").addEventListener("click", function() {
-    document.getElementById("cash-out-parent").style.display = "none";
-    document.getElementById("add-money-parent").style.display = "block";
+    handleToggle("add-money-parent");
+    handleButtonToggle("add-button");
 })
 
 document.getElementById("cash-out-button").addEventListener("click", function() {
-    document.getElementById("add-money-parent").style.display = "none";
-    document.getElementById("cash-out-parent").style.display = "block";
+    handleToggle("cash-out-parent");
+    handleButtonToggle("cash-out-button");
+})
+
+document.getElementById("transfer-button").addEventListener("click", function() {
+    handleToggle("transfer-money-parent");
+    handleButtonToggle("transfer-button");
+})
+
+document.getElementById("bonus-button").addEventListener("click", function() {
+    handleToggle("get-bonus-parent");
+    handleButtonToggle("bonus-button");
+})
+
+document.getElementById("bill-button").addEventListener("click", function() {
+    handleToggle("pay-bill-parent");
+    handleButtonToggle("bill-button");
+})
+
+document.getElementById("trading-button").addEventListener("click", function() {
+    handleToggle("trading-history-parent");
+    handleButtonToggle("trading-button");
 })
