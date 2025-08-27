@@ -162,11 +162,50 @@
         <!-- Get Bonus -->
         <div id="get-bonus-parent" class="p-6 form" style="display: none;">
             <h1 class="text-[18px] font-semibold my-5">Get Bonus</h1>
+            <form class="p-8 rounded-2xl bg-white">
+                <div class="mb-4">
+                    <label class="font-bold" for="">Enter Bonus Coupon</label>
+                    <br>
+                    <input type="text" placeholder="Enter your coupon"
+                        class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" />
+                </div>
+                <button id="send-now-btn" class="btn bg-[#0874F2] mt-5 w-full rounded-3xl text-white">Get Bonus</button>
+            </form>
         </div>
 
         <!-- Pay Bill -->
         <div id="pay-bill-parent" class="p-6 form" style="display: none;">
             <h1 class="text-[18px] font-semibold my-5">Pay Bill</h1>
+            <form class="p-8 rounded-2xl bg-white">
+                <div class="mb-4">
+                    <label class="font-bold" for="">Select To Pay</label>
+                    <select id="bank" class="select bg-[#f4f5f7] mt-3 rounded-3xl w-full">
+                        <option disabled selected>Select bank</option>
+                        <option>Dutch Bangla Bank</option>
+                        <option>Islami Bank</option>
+                        <option>IFTC Bank</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label class="font-bold" for="">Biller Account Number</label>
+                    <br>
+                    <input id="account-number" type="text" placeholder="Enter account number"
+                        class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" />
+                </div>
+                <div class="mb-4">
+                    <label class="font-bold" for="">Amount to Pay</label>
+                    <br>
+                    <input id="add-amount" type="text" placeholder="Add Amount to pay"
+                        class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" />
+                </div>
+                <div>
+                    <label class="font-bold" for="">Pin Number</label>
+                    <br>
+                    <input id="add-pin" type="text" placeholder="Enter 4 digit pin number"
+                        class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" />
+                </div>
+                <button id="add-money-btn" class="btn bg-[#0874F2] mt-5 w-full rounded-3xl text-white">Pay Now</button>
+            </form>
         </div>
 
         <!-- Trading History -->

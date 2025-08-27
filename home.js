@@ -56,6 +56,12 @@ document.getElementById("add-money-btn").addEventListener("click", function(e) {
     const bank = getInputValue("bank");
     const accountNumber = getInputValue("account-number");
     const amount = getInputValueNumber("add-amount");
+
+    if(amount <= 0) {
+        alert("Invalid amount");
+        return;
+    }
+
     const pin = getInputValueNumber("add-pin");
     const availableBalance = getInnerText("available-balance");
     
@@ -85,6 +91,11 @@ document.getElementById("withdraw-btn").addEventListener("click", function(e) {
     
     const amount = getInputValueNumber("withdraw-amount");
     const availableBalance = getInnerText("available-balance");
+
+    if(amount <= 0 || amount > availableBalance) {
+        alert("Invalid amount");
+        return;
+    }
     
     const totalNewAvailabelBalance = availableBalance - amount;
     setInnerText(totalNewAvailabelBalance);
