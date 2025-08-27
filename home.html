@@ -38,27 +38,30 @@
         </div>
 
         <div class="grid grid-cols-3 min-h-[200px] gap-4 p-6">
-            <div id="add-button" class="form-btn border-2 border-gray-300 text-center p-3 rounded-xl">
+            <div id="add-button" class="form-btn border-2 border-gray-300 text-center p-3 rounded-xl cursor-pointer">
                 <img src="./assets/wallet1.png" class="mx-auto" alt="">
                 <h2>Add Money</h2>
             </div>
-            <div id="cash-out-button" class="form-btn border-2 border-gray-300 text-center p-3 rounded-xl">
+            <div id="cash-out-button"
+                class="form-btn border-2 border-gray-300 text-center p-3 rounded-xl cursor-pointer">
                 <img src="./assets/send1.png" class="mx-auto" alt="">
                 <h2>Cashout</h2>
             </div>
-            <div id="transfer-button" class="form-btn border-2 border-gray-300 text-center p-3 rounded-xl">
+            <div id="transfer-button"
+                class="form-btn border-2 border-gray-300 text-center p-3 rounded-xl cursor-pointer">
                 <img src="./assets/money1.png" class="mx-auto" alt="">
                 <h2>Transfer Money</h2>
             </div>
-            <div id="bonus-button" class="form-btn border-2 border-gray-300 text-center p-3 rounded-xl">
+            <div id="bonus-button" class="form-btn border-2 border-gray-300 text-center p-3 rounded-xl cursor-pointer">
                 <img src="./assets/bonus1.png" class="mx-auto" alt="">
                 <h2>Get Bonus</h2>
             </div>
-            <div id="bill-button" class="form-btn border-2 border-gray-300 text-center p-3 rounded-xl">
+            <div id="bill-button" class="form-btn border-2 border-gray-300 text-center p-3 rounded-xl cursor-pointer">
                 <img src="./assets/purse1.png" class="mx-auto" alt="">
                 <h2>Pay Bill</h2>
             </div>
-            <div id="trading-button" class="form-btn border-2 border-gray-300 text-center p-3 rounded-xl">
+            <div id="trading-button"
+                class="form-btn border-2 border-gray-300 text-center p-3 rounded-xl cursor-pointer">
                 <img src="./assets/transaction1.png" class="mx-auto" alt="">
                 <h2>Trading</h2>
             </div>
@@ -83,19 +86,23 @@
                 <div class="mb-4">
                     <label class="font-bold" for="">Bank Account Number</label>
                     <br>
-                    <input id="account-number" type="text" placeholder="Enter 11 digit account number" class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" />
+                    <input id="account-number" type="text" placeholder="Enter 11 digit account number"
+                        class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" />
                 </div>
-                <div class="mb-4"> 
-                   <label class="font-bold" for="">Amount to Add</label>
+                <div class="mb-4">
+                    <label class="font-bold" for="">Amount to Add</label>
                     <br>
-                    <input id="add-amount" type="text" placeholder="Add Amount to withdraw" class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" /> 
+                    <input id="add-amount" type="text" placeholder="Add Amount to withdraw"
+                        class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" />
                 </div>
                 <div>
                     <label class="font-bold" for="">Pin Number</label>
                     <br>
-                    <input id="add-pin" type="text" placeholder="Enter 4 digit pin number" class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" /> 
+                    <input id="add-pin" type="text" placeholder="Enter 4 digit pin number"
+                        class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" />
                 </div>
-                <button id="add-money-btn" class="btn bg-[#0874F2] mt-5 w-full rounded-3xl text-white">Add Money</button>
+                <button id="add-money-btn" class="btn bg-[#0874F2] mt-5 w-full rounded-3xl text-white">Add
+                    Money</button>
             </form>
         </div>
 
@@ -106,27 +113,52 @@
                 <div class="mb-4">
                     <label class="font-bold" for="">Agent Number</label>
                     <br>
-                    <input type="text" placeholder="Enter 11 digit number" class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" />
+                    <input type="text" placeholder="Enter 11 digit number"
+                        class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" />
                 </div>
-                <div class="mb-4"> 
-                   <label class="font-bold" for="">Amount</label>
+                <div class="mb-4">
+                    <label class="font-bold" for="">Amount</label>
                     <br>
-                    <input id="withdraw-amount" type="text" placeholder="Enter amount to withdraw" class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" /> 
+                    <input id="withdraw-amount" type="text" placeholder="Enter amount to withdraw"
+                        class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" />
                 </div>
                 <div>
                     <label class="font-bold" for="">Pin Number</label>
                     <br>
-                    <input type="text" placeholder="Enter 4 digit pin number" class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" /> 
+                    <input type="text" placeholder="Enter 4 digit pin number"
+                        class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" />
                 </div>
-                <button id="withdraw-btn" class="btn bg-[#0874F2] mt-5 w-full rounded-3xl text-white">Withdraw Money</button>
+                <button id="withdraw-btn" class="btn bg-[#0874F2] mt-5 w-full rounded-3xl text-white">Withdraw
+                    Money</button>
             </form>
         </div>
 
         <!-- Transfer Money -->
         <div id="transfer-money-parent" class="p-6 form" style="display: none;">
             <h1 class="text-[18px] font-semibold my-5">Transfer Money</h1>
+            <form class="p-8 rounded-2xl bg-white">
+                <div class="mb-4">
+                    <label class="font-bold" for="">User Account Number</label>
+                    <br>
+                    <input type="text" placeholder="Enter 11 digit number"
+                        class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" />
+                </div>
+                <div class="mb-4">
+                    <label class="font-bold" for="">Amount</label>
+                    <br>
+                    <input id="transfer-amount" type="text" placeholder="Enter amount to transfer"
+                        class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" />
+                </div>
+                <div>
+                    <label class="font-bold" for="">Pin Number</label>
+                    <br>
+                    <input type="text" placeholder="Enter 4 digit pin number"
+                        class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" />
+                </div>
+                <button id="send-now-btn" class="btn bg-[#0874F2] mt-5 w-full rounded-3xl text-white">Send Now</button>
+            </form>
         </div>
-        
+
         <!-- Get Bonus -->
         <div id="get-bonus-parent" class="p-6 form" style="display: none;">
             <h1 class="text-[18px] font-semibold my-5">Get Bonus</h1>
@@ -139,7 +171,14 @@
 
         <!-- Trading History -->
         <div id="trading-history-parent" class="p-6 form" style="display: none;">
-            <h1 class="text-[18px] font-semibold my-5">Trading History</h1>
+            <div class="flex justify-between items-center">
+                <h1 class="text-[18px] font-semibold my-5 bottom-2 border-gray-800">Trading History</h1>
+                <p class="text-[#08080880] cursor-pointer">View All</p>
+            </div>
+
+            <div id="trading-container">
+                
+            </div>
         </div>
     </div>
 

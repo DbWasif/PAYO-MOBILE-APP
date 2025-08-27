@@ -1,4 +1,5 @@
 const validPin = 1234;
+tradingData = [];
 
 // function to get input values
 function getInputValueNumber (id) {
@@ -68,6 +69,13 @@ document.getElementById("add-money-btn").addEventListener("click", function(e) {
     }
     const totalNewAvailabelBalance = amount + availableBalance;
     setInnerText(totalNewAvailabelBalance);
+
+    const data = {
+        name: "Add Money",
+        date: new Date().toLocaleTimeString()
+    }
+    tradingData.push(data);
+    console.log(tradingData);
 })
 
 
@@ -80,6 +88,49 @@ document.getElementById("withdraw-btn").addEventListener("click", function(e) {
     
     const totalNewAvailabelBalance = availableBalance - amount;
     setInnerText(totalNewAvailabelBalance);
+
+    const data = {
+        name: "Cash Out",
+        date: new Date().toLocaleTimeString()
+    }
+    tradingData.push(data);
+    console.log(tradingData);
+})
+
+
+// Transfer Money
+document.getElementById("send-now-btn").addEventListener("click", function(e) {
+    e.preventDefault();
+
+    const amount = getInputValueNumber("transfer-amount");
+    const availableBalance = getInnerText("available-balance");
+    
+    const totalNewAvailabelBalance = availableBalance - amount;
+    setInnerText(totalNewAvailabelBalance);
+})
+
+
+document.getElementById("trading-button").addEventListener("click", function() {
+    const tradingContainer = document.getElementById("trading-container")
+    tradingContainer.innerText = "";
+    for(const data of tradingData) {
+        const div = document.createElement("div")
+        div.innerHTML=`
+        <div class="bg-white rounded-xl p-3 flex justify-between items-center mb-4">
+                    <div class="flex items-center">
+                        <div class="p-3 rounded-full bg-[#f4f5f7]">
+                            <img src="./assets/wallet1.png" alt="">
+                        </div>
+                        <div class="ml-3">
+                            <h1>${data.name}</h1>
+                            <p>${data.date}</p>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            `
+            tradingContainer.appendChild(div);
+    }
 })
 
 

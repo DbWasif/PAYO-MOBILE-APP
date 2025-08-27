@@ -15,7 +15,7 @@ document.getElementById("loginButton").addEventListener("click", function (e) {
      window.location.href = "./home.html";
    }
    else{
-     alert("Invalid Credentials");
+    alert("Invalid Credentials");
    }
     
 });
